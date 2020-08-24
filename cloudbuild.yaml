@@ -8,5 +8,5 @@ steps:
     args: [ 'ps']
 
   - id: "Executando LS"
-      name: 'gcr.io/cloud-builders/docker'
-      args: [ 'exec', '-t', 'soma-go', 'ls', 'pwd' ]
+    name: 'gcr.io/cloud-builders/docker'
+    args: [ 'exec', '-t', 'soma-go', 'ls', 'pwd' ]
