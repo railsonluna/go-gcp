@@ -1,23 +1,23 @@
 steps:
-#  - id: "Rodando docker-compose"
-#    name: 'gcr.io/$PROJECT_ID/docker-compose'
-#    args: [ '-f', 'docker-compose.yml', 'up', '--build', '-d' ]
+#   - id: "Rodando docker-compose"
+#     name: 'gcr.io/$PROJECT_ID/docker-compose'
+#     args: [ '-f', 'docker-compose.yml', 'up', '--build', '-d' ]
 
-#  - id: "Docker ps"
-#    name: 'gcr.io/cloud-builders/docker'
-#    args: [ 'ps']
-#
-#  - id: "Executando LS"
-#    name: 'gcr.io/cloud-builders/docker'
-#    args: [ 'exec', '-t', 'soma-go', 'ls', 'pwd' ]
+#   - id: "Docker ps"
+#     name: 'gcr.io/cloud-builders/docker'
+#     args: [ 'ps']
+
+#   - id: "Executando LS"
+#     name: 'gcr.io/cloud-builders/docker'
+#     args: [ 'exec', '-t', 'soma-go', 'ls', 'pwd' ]
 
 
   - id: go_version
-      name: "gcr.io/cloud-builders/go"
-      args: ["version"]
-      env: ["GOPATH=."]
+    name: "gcr.io/cloud-builders/go"
+    args: ["version"]
+    env: ["GOPATH=."]
 
-    - id: go_test
-        name: "gcr.io/cloud-builders/go"
-        args: [ "test","soma" ]
-        env: [ "GOPATH=." ]
+  - id: go_test
+    name: "gcr.io/cloud-builders/go"
+    args: [ "test", "main" ]
+    env: [ "GOPATH=." ]
