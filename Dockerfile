@@ -6,8 +6,8 @@ RUN go get golang.org/x/tools/cmd/cover
 WORKDIR /src/main
 COPY . .
 
-RUN go run src/main/main.go
-RUN cd src/main && go test
+#RUN go run src/main/main.go
+#RUN cd src/main && go test
 
 #FROM scratch
 #
