@@ -1,8 +1,12 @@
 steps:
   - id: "Rodando docker-compose"
     name: 'gcr.io/$PROJECT_ID/docker-compose'
-    args: [ '-f', 'docker-compose.yml', 'up', '-d' ]
+    args: [ '-f', 'docker-compose.yml', 'up', '--build', '-d' ]
 
   - id: "Docker ps"
     name: 'gcr.io/cloud-builders/docker'
     args: [ 'ps']
+
+  - id: "Executando LS"
+      name: 'gcr.io/cloud-builders/docker'
+      args: [ 'exec', '-t', 'soma-go', 'ls', 'pwd' ]
