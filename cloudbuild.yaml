@@ -12,11 +12,11 @@ steps:
 #     args: [ 'exec', '-t', 'soma-go', 'ls', 'pwd' ]
 
   - id: go_version
-      name: "gcr.io/cloud-builders/go"
-      args: ["version"]
-      env: ["GOPATH=."]
+    name: "gcr.io/cloud-builders/go"
+    args: ["version"]
+    env: ["GOPATH=."]
 
   - id: go_test
-      name: "gcr.io/cloud-builders/go"
-      args: [ "test", "main_test" ]
-      env: [ "GOPATH=." ]
+    name: "gcr.io/cloud-builders/go"
+    args: [ "test", "main_test" ]
+    env: [ "GOPATH=." ]
