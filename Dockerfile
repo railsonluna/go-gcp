@@ -6,7 +6,7 @@ RUN go get golang.org/x/tools/cmd/cover
 WORKDIR /src/soma
 COPY . .
 
-#RUN go run src/soma/soma.go
+RUN go run src/soma/soma.go
 #RUN cd src/soma && go test
 
 #FROM scratch
