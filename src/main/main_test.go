@@ -1,4 +1,4 @@
-package soma
+package main
 
 import "testing"
 

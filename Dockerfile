@@ -6,11 +6,11 @@ RUN go get golang.org/x/tools/cmd/cover
 WORKDIR /src/soma
 COPY . .
 
-RUN go run src/soma/soma.go
-#RUN cd src/soma && go test
+RUN go run src/main/main.go
+#RUN cd src/main && go test
 
 #FROM scratch
 #
-#COPY --from=multistage /src/soma/soma /
+#COPY --from=multistage /src/main/main.go /
 #
-#CMD ["/soma"]
+#CMD ["/main"]
