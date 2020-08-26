@@ -2,7 +2,6 @@ version: '3'
 
 services:
   go:
-    container_name: go-main
     build: ./
 
 
